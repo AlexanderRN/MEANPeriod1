@@ -56,5 +56,45 @@ function isItHoistedPrint() {
 ```
 //====== Code End======//
 
+## *This* in JavaScript and how it differs from what we know in Java/.NET:
+The *This* keyword, works different in JS than Java/.NET. 
+
+When a function is run it gets the *This* variable from the value of the object that invokes the function.
 
 
+There are two Syntaxes of this. For example: 
+###### Global Context
+In the global context *This* refers to the global object with or without strict mode.
+``` 
+console.log(this.document === document); // true
+
+// In web browsers, the window object is also the global object:
+console.log(this === window); // true
+
+this.a = 37;
+console.log(window.a); // 37
+```
+
+###### Function Context
+If used inside a function, the value of *This* is depending on how the function is called.
+Simple call:
+```
+function f1(){
+  return this;
+}
+
+f1() === window; // global object
+```
+Where the code is not in strict mode This is set to the default global object, as it is not pointed towards a local object.
+
+```
+function f2(){
+  "use strict"; // see strict mode
+  return this;
+}
+
+f2() === undefined;
+```
+Here *This* is set to whatever it is pointed towards at the start of the execution. If not set it will be undefined. 
+
+For more information about *This* in JS look [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this).
