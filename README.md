@@ -120,3 +120,42 @@ add();
 
 ###### JavaScript Module Pattern
 Module Pattern is a way of avoiding global variables. As shown in the example above the counter is controlled from outside, but the counter variable itself is stored locally. 
+
+## Immediately-Invoked Function Expressions (IIFE):
+
+IIFE is a JS design pattern, and is used to avoid variable hoisting from within blocks.
+
+``` 
+(function(){
+  // my special code
+}());
+```
+Here is an anonymous function IIFE because it is wrapped inside parentheses. This makes the function run immediatly on execution.
+
+## JavaScript Prototyping:
+
+Every single JS object has a prototype. This prototype is also an object.
+What this means is that all objects in JavaScript inherits their properties and methods from their prototype.
+
+This can also be seen in the GitHub examples at [here](https://github.com/AlexanderRN/MEANPeriod1/blob/master/Javascript%20Exercises/Hoisting.js).
+
+## Use the Debugger to explain about the basic "things" all objects inherits from object:
+See the example.
+This can also be seen in the GitHub examples at [here](https://github.com/AlexanderRN/MEANPeriod1/blob/master/Javascript%20Exercises/Debugger.js).
+
+## User defined Callback Functions:
+User defined Callback Functions adds a new layer of functionality to a program. 
+
+(Exercise 4, at the end of the code)
+This can also be seen in the GitHub examples at [here](https://github.com/AlexanderRN/MEANPeriod1/blob/master/Javascript%20Exercises/MagicCallbacks.js).
+
+## Explain generally about node.js and NPM:
+Node is a JavaScript built on Chromes V8 JS Engine.
+It is event-driven, non-blocking which makes it efficient and fast.
+
+NPM is a Node Package Manager, which allows us to add packages on top of our Node project, and therefor add functionality.
+NPM is an enourmous ecosystem of packages to ease applications, and easy to use.
+
+## Provide examples of user defined reusable modules implemented in Node.js:
+
+This can also be seen in the GitHub examples at [here](https://github.com/AlexanderRN/MEANPeriod1/blob/master/Javascript%20Exercises/Hoisting.js).
