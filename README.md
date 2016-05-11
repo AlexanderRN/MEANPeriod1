@@ -98,3 +98,25 @@ f2() === undefined;
 Here *This* is set to whatever it is pointed towards at the start of the execution. If not set it will be undefined. 
 
 For more information about *This* in JS look [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this).
+
+
+## Function Closures and the JavaScript Module Pattern:
+###### Function Closures
+Closures are functions whose inner functions refer to independent free variables.
+For example any function defined inside the closure will remember the intial environment of where it was created.
+
+```
+var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+})();
+
+add();
+add();
+add();
+
+// the counter is now 3
+```
+
+###### JavaScript Module Pattern
+Module Pattern is a way of avoiding global variables. As shown in the example above the counter is controlled from outside, but the counter variable itself is stored locally. 
